@@ -26,7 +26,6 @@ A rough diagram of our process is below:
 
 
 ### Task
-<!-->DONE Explain the task you are going to be solving with this dataset and the features you will be using for it.<-->
 
 The data contains 81 predictors for 2,930 properties in Ames, IA; the task at hand is predict the cost of a house based on features of the given property.
 
@@ -36,7 +35,6 @@ For each we select the best model based on performance metrics and deploy it for
 
 We are trying to determine which model is better at estimating the sale price for a given house in Ames, Iowa.
 
-<!-->TODO What features are going to be used?<--> 
 For AutoML I made use of featurization to determine which features to use with few exceptions.
 I knew going in that `Order` and `PID` were not going to be useful features, as they specify the parcel I.D. number (for reviewing on the city website) and the observation number, so are effectively meaningless.
 
@@ -98,7 +96,6 @@ df = data.to_pandas_dataframe()
 ```
 
 ## Automated ML
-<!-->TODO Give an overview of the `automl` settings and configuration you used for this experiment<-->
 ### Settings
 The `automl` settings were set up basically for one of two reasons:
 1. Limiting the run-time/cost on the machine:
@@ -120,8 +117,8 @@ The normalized RMSE is pretty inuitive and has the added benefit of not allowing
 
 
 ### Results
-<!-->TODO What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?<-->
-The lowest normalized RMSE we scored was .0.325 using a VoterEnsemble model.
+The lowest normalized RMSE we scored was .0.325 using a VoterEnsemble model, which was a combination of four models: 'LightGBM', 'XGBoostRegressor', 'SGD', 'ElasticNet' which each were given a different weight.
+
 ![imag](Images/AutoMLipynb/ActualBestModel.PNG)
 Output showing that the run completed:
 ![imag](Images/AutoMLipynb/RunDetailsCompleted.PNG)
@@ -234,7 +231,7 @@ For numerical values that are empty, I'd replace them with the most applicable s
 
 
 ## Model Deployment
-<!-->TODO Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.<-->
+
 Since `AutoML` has the best model, I deployed using the **automl.ipynb** notebook.
 
 First we save the best model:
@@ -397,7 +394,6 @@ One this is completed, we need to delete the service:
 
 
 ## Screen Recording
-<!-->TODO Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:<-->
 [Screen recording demonstrating working model, demo of deployed model, and sample request sent to endpoint and response here.](https://youtu.be/vu5KaZe-IjM)
 
 ## References
