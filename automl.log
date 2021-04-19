@@ -1,0 +1,144 @@
+2021-04-18 20:59:02.587 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 20:59:02.599 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 20:59:02.603 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-18 20:59:02.712 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=109.13[ms]
+2021-04-18 20:59:02.759 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=159.82[ms]
+2021-04-18 20:59:02.759 - INFO - 21040 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-04-18 20:59:14.094 - INFO - 21040 - azureml.automl.runtime.featurization.data_transformer.__init__:173 - Feature sweeping enabled: False
+2021-04-18 20:59:14.095 - INFO - 21040 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping timeout: 86400
+2021-04-18 20:59:16.738 - INFO - 21040 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=13978.84[ms]
+2021-04-18 20:59:16.793 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=14206.08[ms]
+2021-04-18 21:04:33.129 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 21:04:33.194 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 21:04:33.215 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-18 21:04:33.280 - INFO - 21040 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-18 21:04:33.914 - CRITICAL - 21040 - azureml.train.automl.run.log_traceback:227 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 838, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-04-18 21:04:33.926 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=646.18[ms]
+2021-04-18 21:04:33.937 - CRITICAL - 21040 - azureml.train.automl.run.log_traceback:227 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 797, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(automl_settings.primary_metric)
+  File "run.py", line 838, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-04-18 21:04:33.943 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=728.18[ms]
+2021-04-18 21:04:33.944 - CRITICAL - 21040 - azureml.train.automl.run.log_traceback:227 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 637, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 797, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(automl_settings.primary_metric)
+  File "run.py", line 838, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-04-18 21:04:33.944 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=749.69[ms]
+2021-04-18 21:04:33.945 - CRITICAL - 21040 - azureml.train.automl.run.log_traceback:227 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'normalized_root_mean_squared_error'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 710, in get_output
+    activity_name=automl_shared_constants.TelemetryConstants.GET_OUTPUT
+  File "run.py", line 637, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 797, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(automl_settings.primary_metric)
+  File "run.py", line 838, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-04-18 21:04:33.945 - INFO - 21040 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=816.82[ms]
+2021-04-18 21:25:59.461 - INFO - 2643 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 21:25:59.512 - INFO - 2643 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 21:25:59.529 - INFO - 2643 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-18 21:26:00.257 - INFO - 2643 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=727.57[ms]
+2021-04-18 21:26:00.613 - INFO - 2643 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=1100.95[ms]
+2021-04-18 21:26:00.614 - INFO - 2643 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-04-18 21:26:04.135 - INFO - 2643 - azureml.automl.runtime.featurization.data_transformer.__init__:173 - Feature sweeping enabled: False
+2021-04-18 21:26:04.135 - INFO - 2643 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping timeout: 86400
+2021-04-18 21:26:04.748 - INFO - 2643 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=4134.37[ms]
+2021-04-18 21:26:04.783 - INFO - 2643 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=5321.8[ms]
