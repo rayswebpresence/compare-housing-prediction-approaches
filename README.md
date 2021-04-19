@@ -4,7 +4,7 @@ This is a capstone project completed as part of the inauguaral class for Udacity
 This project makes use of [Ames Housing Dataset](http://jse.amstat.org/v19n3/decock/AmesHousing.txt)<sup>1</sup> made available for education from Dean De Cock  and featured/introduced to me through Kaggle's [Getting Started Prediction Competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).  
 
 A rough diagram of our process is below:
-![imag](Images/CapstoneDiagram.PNG)
+![imag](Images/CapstoneDiagram.png)
 
 ## Project Set Up and Installation
 <!-->DONE add links><-->
