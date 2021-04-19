@@ -7,7 +7,6 @@ A rough diagram of our process is below:
 ![imag](Images/CapstoneDiagram.png)
 
 ## Project Set Up and Installation
-<!-->DONE add links><-->
 ### Python Packages
 [azureml-core 1.26.0](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/install?view=azure-ml-py) - Azure Machine Learning SDK for Python
 [json 2.0.9](https://docs.python.org/3/library/json.html#module-json) - 
